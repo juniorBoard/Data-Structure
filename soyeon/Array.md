@@ -144,7 +144,7 @@ System.out.println(arr3.length);
 double[] grades = {4.5, 3.5, 4.0, 3.0};
 
 // 자바 점수 읽기
-System.out.println("자바 = " + grades[0]);
+System.out.println("자바 = " + grades[0]); // 자바 = 4.5
 
 // 자바 점수 변경
 grades[0] = 4.0;
@@ -156,8 +156,11 @@ for (int i = 0; i < grades.length; i++) {
   sum += grades[i];
 }
 
-double avg = sum / grades.length;
-System.out.printf("평점: %.2f\n", avg);
+double avg = sum / grades.length; // 3.625 = 14.5 / 4
+System.out.printf("평점: %.2f\n", avg); // 평점: 3.63
+
+// %f : 실수형 출력
+// %.2f : 소수점 둘째 자리 출력
 ```
 <br><br><br>
 
