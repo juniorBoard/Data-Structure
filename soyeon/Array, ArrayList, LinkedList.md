@@ -35,7 +35,7 @@
 - 시간복잡도 → 삽입과 삭제 : `O(1)`,  탐색 : `O(n)`                        
   - 단, 어느 곳에 삽입하던지 삭제하던지 `O(n)`의 시간 복잡도를 갖고 있지만 중간 삽입 혹은 중간 삭제가 없다면 시간 복잡도 `O(1)`이 된다.              
 
-<br><br>
+<br><br><br>
 
 ### Array와 LinkedList 비교
 
@@ -51,7 +51,7 @@
 
 - *Linked List* : 랜덤 접근이 불가능하다. 순차접근 방식 _ `O(n)`
 
-<br><br>
+<br><br><br>
 
 #### 데이터 접근 속도
 
@@ -69,7 +69,7 @@
 
 시간 복잡도 `O(N)`                                  
 
-<br><br>
+<br><br><br>
               
 #### 데이터의 삽입 속도
 🐣 배열에 공간이 많이 남아있고 맨 끝에 삽입한다면 삽입 속도 역시 O(1)에 가능하다.
@@ -96,7 +96,7 @@
 
 **LinkedList**는 추가할 때마다 동적으로 할당한다.
 
-<br><br>
+<br><br><br>
 
 #### 데이터의 삭제 속도
 **Array**는 데이터 삭제의 경우 그 위치의 데이터를 삭제 후, 전체적으로 Shift 해줘야 한다. (O(N))
@@ -105,7 +105,7 @@
 
 결국 `O(N)`의 시간 복잡도를 갖는다. 하지만 Array 보다 빠르게 삭제 연산을 수행한다.
 
-<br><br>
+<br><br><br>
 
 #### 메모리 할당
 **Array**에서 메모리는 Array가 선언되자 마자 Compile time에 할당되어 진다. 
@@ -122,7 +122,7 @@ Stack 영역에 메모리 할당이 이루어진다.
 
 Heap 영역에 메모리 할당이 이루어진다.
 
-<br><br>
+<br><br><br>
 
 #### size
 Array의 size는 반드시 선언 시점에 지정되어있어야 한다.
@@ -145,9 +145,47 @@ node들이 추가될 때 runtime 시점에서 LinkedList의 size가 커질 수 �
 
 <br><br><br>
 
-## ArrayList
+---
+
+# Java List Collection
+List는 Collection 인터페이스를 확장한 자료형으로 동일한 데이터의 중복 입력이 가능하며 순차적이고 다량의 데이터를 입력할 때 주로 사용한다.          
+
+종류는 Vector, Arraylist, Linkedlist가 있다.              
 
 <br><br>
+
+## ArrayList
+일반 배열과 ArrayList는 인덱스로 객체를 관리한다는 점에서 동일하지만, 크기를 동적으로 늘릴 수 있다는 점에서 차이점이 있다.
+
+ArrayList는 내부에서 처음 설정한 저장 용량(capacity)가 있다. 
+
+설정한 저장 용량 크기를 넘어서 더 많은 객체가 들어오게 되면, 배열 크기를 1.5배로 증가시킨다.   
+
+```java
+// DEFAULT_CAPACITY=10
+// 기본 저장용량 10으로 리스트 생성
+List<String> list = new ArrayList<>(); 
+
+// 저장 용량을 100으로 설정해 ArrayList 생성 
+List<String> list = new ArrayList<>(100);
+```
+
+ArrayList에서 특정 인덱스의 객체를 제거하게 되면, 제거한 객체의 인덱스부터 마지막 인덱스까지 모두 앞으로 1칸씩 앞으로 이동한다. 
+
+객체를 추가하게 되면 1칸씩 뒤로 이동하게 된다. 인덱스 값을 유지하기 위해서 전체 객체가 위치가 이동한다.
+
+따라서 잦은 원소의 이동, 삭제가 발생할 경우 ArrayList보다 **LinkedList**를 사용하는 것이 좋다.
+
+<br><br><br>
+
+### Array와 ArrayList 비교
+- **Array**는 크기가 고정되어있지만 **ArrayList**는 사이즈가 동적인 배열이다.
+- **Array**는 primitive type(int, byte, char 등)과 object 모두를 담을 수 있지만, **ArrayList**는 object element만 담을 수 있다.
+- **Array**는 제네릭을 사용할 수 없지만, **ArrayList**는 타입 안정성을 보장해주는 제네릭을 사용할 수 있다.
+- 길이에 대해 **Array**는 length 변수를 쓰고, **ArrayList**는 size() 메서드를 써야한다.              
+- **Array**는 element들을 할당하기 위해 assignment(할당) 연산자를 써야하고, **ArrayList**는 add() 메서드를 통해 element를 삽입한다.
+
+<br><br><br>
 
 ### LinkedList와 ArrayList 비교
 
@@ -155,9 +193,9 @@ node들이 추가될 때 runtime 시점에서 LinkedList의 size가 커질 수 �
 
 하지만 인터페이스만 같을 뿐 내부적으로 동작하는 방식은 다르다. 
 
-<br><br>
+<br>
 
-### ArrayList
+#### ArrayList
 ArrayList는 내부적으로 데이터를 배열에서 관리하며 데이터의 추가, 삭제를 위해                       
 
 아래와 같이 임시 배열을 생성해 데이터를 복사 하는 방법을 사용 하고 있다.
@@ -169,9 +207,9 @@ ArrayList는 내부적으로 데이터를 배열에서 관리하며 데이터의
 
 반면 각 데이터는 인덱스를 가지고 있기 때문에 한번에 참조가 가능해 데이터의 **검색**에는 유리한 구현체이다.
 
-<br><br>
+<br><br><br>
 
-### LinkedList
+#### LinkedList
 
 LinkedList는 데이터를 저장하는 각 노드가 이전 노드와 다음 노드의 상태만 알고 있다고 보면 된다.
 
@@ -181,11 +219,11 @@ ArrayList와 같이 데이터의 추가, 삭제시 불필요한 데이터의 복
 
 데이터의 **검색**시에는 처음부터 노드를 순회해야 하기 때문에 성능상 불리하다.
 
-<br><br>
+<br><br><br>
 
-### 데이터의 검색, 삽입, 삭제시 성능 비교
+#### 데이터의 검색, 삽입, 삭제시 성능 비교
 
-#### 검색
+##### 검색
 
 데이터 검색 시에는 ***ArrayList***는 *LinkedList*에 비해 굉장히 빠르다.                      
 
@@ -193,9 +231,9 @@ ArrayList는 인덱스 기반의 자료 구조이며 get(int index) 를 통해 `
 
 그에 비해 ***LinkedList***는 검색 시 모든 요소를 탐색해야 하기 때문에 최악의 경우에는 `O(N)`의 시간 복잡도를 가진다.                      
 
-<br><br>
+<br><br><br>
 
-#### 삽입, 삭제
+##### 삽입, 삭제
 
 ***LinkedList***에서의 데이터의 삽입, 삭제 시에는 *ArrayList*와 비교해 굉장히 빠른데,         
 
@@ -205,7 +243,7 @@ LinkedList는 이전 노드와 다음 노드를 참조하는 상태만 변경하
 
 반면 ***ArrayList***의 경우 삽입, 삭제 이후 다른 데이터를 복사해야 하기 때문에 최악의 경우 `O(N)` 의 성능을 내게 된다.                      
 
-<br><br>
+<br><br><br>
 
 **ArrayList에서의 삽입, 삭제 과정**
 
@@ -213,7 +251,7 @@ LinkedList는 이전 노드와 다음 노드를 참조하는 상태만 변경하
 
 <img src = https://user-images.githubusercontent.com/74857364/196973091-947e0e05-68c5-4b03-83bf-ce11f9b7c5b4.png width="75%">
 
-<br><br>
+<br><br><br>
 
 **LinkedList에서의 삽입, 삭제 과정**
 
@@ -221,9 +259,7 @@ LinkedList는 이전 노드와 다음 노드를 참조하는 상태만 변경하
 
 <img src = https://user-images.githubusercontent.com/74857364/196973142-1ef64493-52a3-440d-a694-dfd4a2b4da42.png width="75%">       
 
-
-
-<br><br>
+<br><br><br>
 
 - **Array**	: 정적인 길이를 제공하는 배열                      
 - **ArrayList**	: 동기화가 제공되지 않음. 데이터의 **검색에 유리**하며 추가, 삭제에는 성능을 고려해야 한다.          
@@ -234,4 +270,5 @@ LinkedList는 이전 노드와 다음 노드를 참조하는 상태만 변경하
 출처                 
 [Java의 LinkedList와 ArrayList에 대한 비교](https://www.holaxprogramming.com/2014/02/12/java-list-interface/)             
 [[Data Structure] Array vs LinkedList](https://woovictory.github.io/2018/12/27/DataStructure-Diff-of-Array-LinkedList/)                   
-[자료구조: Linked List 대 ArrayList](https://www.nextree.co.kr/p6506/)                 
+[자료구조: Linked List 대 ArrayList](https://www.nextree.co.kr/p6506/)                  
+[[JAVA] LIST와 ArrayList란?](https://devlogofchris.tistory.com/42)       
