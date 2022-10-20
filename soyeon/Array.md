@@ -52,9 +52,13 @@
 
 ## 랜덤 접근과 순차적 접근
 
-- Random Access: 어떤 요소에 바로 접근하는 것
+- Random Access: 어떤 요소에 바로 접근하는 것                        
+  <img src = https://user-images.githubusercontent.com/74857364/196882977-bc00b959-f4f8-4a16-be32-61751adb7070.png width="50%">             
 
-- Sequential Access: 어떤 요소에 접근할 때, 처음부터 차례차례 접근하는 것
+
+- Sequential Access: 어떤 요소에 접근할 때, 처음부터 차례차례 접근하는 것                          
+  <img src = https://user-images.githubusercontent.com/74857364/196880487-6913814e-e835-4215-a5f1-c468ad157052.png width="70%">                   
+
 
 직접 접근이라고 하는 랜덤 접근은 동일한 시간에 배열과 같은 순차적인 데이터가 있을 때                              
 임의의 인덱스에 해당하는 데이터에 접근할 수 있는 기능이다.                                  
