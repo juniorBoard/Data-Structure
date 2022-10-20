@@ -9,7 +9,7 @@
 ## 구조
 연결 리스트는 아래와 같이 노드와 포인터로 이루어져 있고 다음 노드와 연결되어 있다.
 
-![image](https://user-images.githubusercontent.com/74857364/196752267-a32b51c2-65cd-4667-8cf6-64a794aa3472.png)
+<img src = https://user-images.githubusercontent.com/74857364/196752267-a32b51c2-65cd-4667-8cf6-64a794aa3472.png width="55%">           
 
 - 자료의 주소 값으로 노드를 이용해 서로 연결되어 있는 구조를 갖는다.
   - → 메모리를 연속적으로 사용하지 않는다.
@@ -51,7 +51,7 @@ prev 포인터와 next 포인터로 앞과 뒤의 노드를 연결시킨 것이 
 ### 싱글 연결 리스트(Singly Linked List)
 **자료들이 링크로 서로 연결되어 있는 형태**
 
-![image](https://user-images.githubusercontent.com/74857364/196751267-af74923a-c845-4e9c-9bec-d235ce559021.png)
+<img src = https://user-images.githubusercontent.com/74857364/196751267-af74923a-c845-4e9c-9bec-d235ce559021.png width="70%">       
 
 - 단방향 링크
 - 이전 노드에 접근하기 위해선 첫 번째 노드부터 다시 순회해야한다.
@@ -111,7 +111,7 @@ prev 포인터와 next 포인터로 앞과 뒤의 노드를 연결시킨 것이 
 따라서 원형의 형태를 띄게 된다.    
 
 
-![image](https://user-images.githubusercontent.com/74857364/196751343-8729ecea-f28e-4311-898f-d93358547db2.png)
+<img src = https://user-images.githubusercontent.com/74857364/196751343-8729ecea-f28e-4311-898f-d93358547db2.png width="70%">   
 
 - HEAD에서 부터 시작해서 시계방향 또는 시계 반대방향으로 순환이 가능하다.        
 
