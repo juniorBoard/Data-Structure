@@ -120,6 +120,206 @@ prev 포인터와 next 포인터로 앞과 뒤의 노드를 연결시킨 것이 
 
 ## code
 ### 단일 연결 리스트 
+데이터와 다른 노드를 가리킬 주소 데이터를 담을 객체가 필요하다. → 노드(*node*)
+
+![image](https://user-images.githubusercontent.com/74857364/196886282-6c3e0ee9-a076-47cd-990f-beafefae4de9.png)
+
+사용자가 저장할 데이터는 data 변수에 담기고, reference 데이터(참조 데이터)는 다음에 연결할 노드를 가리키는 데이터가 담긴다.
+
+위와같은 노드들이 여러개가 연결 되어있는 것을 연결 리스트, 즉 LinkedList라고 한다.
+
+이렇게 연결된 노드들에서 '삽입'을 한다면 링크만 바꿔주면 되기 때문에 매우 편리하며,
+반대로 '삭제'를 한다면 삭제 할 노드에 연결 된 이전노드에서 링크를 끊고 삭제할 노드의 다음 노드를 연결해주면 된다.
+
+#### Node 구현
+```java
+class Node<E> {
+ 
+	E data;
+	Node<E> next;	// 다음 노드객체를 가리키는 래퍼런스 변수
+ 
+	Node(E data) {
+		this.data = data;
+		this.next = null;
+	}
+}
+```
+next 가 앞서 그림에서 보여주었던 Reference 변수다. 
+
+다음 노드를 가리키는 변수이며, '노드 자체'를 가리키기 때문에 타입 또한 `Node<E>`타입으로 지정해주어야 한다.
+
+그리고 위 노드를 이용하기 위한 단일 연결리스트(Singly LinkedList)를 구현하면 된다.
+
+#### List Interface
+```java
+public interface List<E> {
+ 
+	/**
+	 * 리스트에 요소를 추가한다.
+	 * @param value 리스트에 추가할 요소
+	 * @return 리스트에서 중복을 허용하지 않을 경우에 리스트에 이미 중복되는 
+	 *         요소가 있을 경우 {@code false}를 반환하고, 중복되는 원소가
+	 *         없을경우 {@code true}를 반환
+	 */
+	boolean add(E value);
+ 
+	
+	/**
+	 * 리스트에 요소를 특정 위치에 추가합니다. 
+	 * 특정 위치 및 이후의 요소들은 한 칸씩 뒤로 밀린다.
+	 * @param index 리스트에 요소를 추가할 특정 위치 변수
+	 * @param value 리스트에 추가할 요소
+	 */
+	void add(int index, E value);
+ 
+	
+	/**
+	 * 리스트의 index 위치에 있는 요소를 삭제한다.
+	 * @param index 리스트에서 삭제 할 위치 변수
+	 * @return 삭제된 요소를 반환
+	 */
+	E remove(int index);
+ 
+	
+	/**
+	 * 리스트에서 특정 요소를 삭제합니다. 동일한 요소가 
+	 * 여러 개일 경우 가장 처음 발견한 요소만 삭제된다.
+	 * @param value 리스트에서 삭제할 요소
+	 * @return 리스트에 삭제할 요소가 없거나 삭제에 실패할 
+	 *         경우 {@code false}를 반환하고 삭제에 성공할 경우 {@code true}를 반환 
+	 */
+	boolean remove(Object value);
+ 
+	
+	/**
+	 * 리스트에 있는 특정 위치의 요소를 반환한다.
+	 * 
+	 * @param index 리스트에 접근할 위치 변수 
+	 * @return 리스트의 index 위치에 있는 요소 반환 
+	 */
+	E get(int index);
+ 
+	
+	/**
+	 * 리스트에서 특정 위치에 있는 요소를 새 요소로 대체한다.
+	 * @param index 리스트에 접근할 위치 변수 
+	 * @param value 새로 대체할 요소 변수 
+	 */
+	void set(int index, E value);
+ 
+	
+	/**
+	 * 리스트에 특정 요소가 리스트에 있는지 여부를 확인한다.
+	 * @param value 리스트에서 찾을 특정 요소 변수 
+	 * @return 리스트에 특정 요소가 존재할 경우 {@code true}, 존재하지 않을 경우 {@code false}를 반환  
+	 */
+	boolean contains(Object value);
+ 
+	
+	/**
+	 * 리스트에 특정 요소가 몇 번째 위치에 있는지를 반환한다.
+	 * @param value 리스트에서 위치를 찾을 요소 변수  
+	 * @return 리스트에서 처음으로 요소와 일치하는 위치를 반환.
+	 *         만약 일치하는 요소가 없을경우 -1 을 반환 
+	 */
+	int indexOf(Object value);
+ 
+	
+	/**
+	 * 리스트에 있는 요소의 개수를 반환한다.
+	 * @return 리스트에 있는 요소 개수를 반환  
+	 */
+	int size();
+ 
+	
+	/**
+	 * 리스트에 요소가 비어있는지를 반환한다.
+	 * @return 리스트에 요소가 없을경우 {@code true}, 요소가 있을경우 {@code false}를 반환 
+	 */
+	boolean isEmpty();
+ 
+	
+	/**
+	 * 리스트에 있는 요소를 모두 삭제한다.
+	 */
+	public void clear();
+ 
+}
+```
+
+#### SingleLinked 클래스
+List 인터페이스를 implements 해준다.
+
+```java
+public class SingleLinked<E> implements List<E> {
+	private Node<E> head;	// 노드의 첫 부분
+	private Node<E> tail;	// 노드의 마지막 부분
+	private int size;	// 요소 개수
+
+	// 생성자
+	public SingleLinked() {
+		this.head = null;
+		this.tail = null;
+		this.size = 0;
+	}
+}
+```
+- Node<E> head : 리스트의 가장 첫 노드를 가리키는 변수다.
+
+- Node<E> tail : 리스트의 가장 마지막 노드를 가리키는 변수다.
+
+- size : 리스트에 있는 요소의 개수(=연결 된 노드의 개수)
+
+
+처음 단일 연결리스트를 생성 할 때에는 아무런 데이터가 없으므로  
+head와 tail이 가리킬 노드가 없기에 null로 초기화 및 size는 0으로 초기화해준다.
+
+#### search 메소드 구현
+단일 연결리스트이다보니 특정 위치의 데이터를 삽입, 삭제, 검색하기 위해서는 처음 노드(head)부터 next변수를 통해 특정 위치까지 찾아가야 하기 때문에
+search() 메소드를 작성한다.
+```java
+// 특정 위치의 노드를 반환하는 메소드
+private Node<E> search(int index) {
+		
+	// 범위 밖(잘못된 위치)일 경우 예외 던지기 
+	if(index < 0 || index >= size) {
+		throw new IndexOutOfBoundsException();
+	}
+		
+	Node<E> x = head;	// head가 기리키는 노드부터 시작 
+		
+	for (int i = 0; i < index; i++) {
+		x = x.next;	// x노드의 다음 노드를 x에 저장한다
+	}
+	return x;
+}
+```
+
+#### add 메소드 구현
+- 가장 앞부분에 추가 - addFirst(E value)
+
+- 가장 마지막 부분에 추가 (기본값) - addLast(E value)
+
+- 특정 위치에 추가 - add(int index, E value)
+
+```java
+public void addFirst(E value) {
+ 
+	Node<E> newNode = new Node<E>(value);	// 새 노드 생성
+	newNode.next = head;	// 새 노드의 다음 노드로 head 노드를 연결
+	head = newNode;	// head가 가리키는 노드를 새 노드로 변경
+	size++;
+ 
+	/**
+	 * 다음에 가리킬 노드가 없는 경우(=데이터가 새 노드밖에 없는 경우)
+	 * 데이터가 한 개(새 노드)밖에 없으므로 새 노드는 처음 시작노드이자
+	 * 마지막 노드다. 즉 tail = head 다.
+	 */
+	if (head.next == null) {
+		tail = head;
+	}
+}
+```
 
 <br><br><br>
 
@@ -149,4 +349,4 @@ prev 포인터와 next 포인터로 앞과 뒤의 노드를 연결시킨 것이 
 [[Data Structure] 연결리스트에 대해 알아보자(Linked List)](https://fomaios.tistory.com/entry/DataStructure-%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90Linked-List)         
 [원형 연결리스트, 이중 연결리스트, 이중 원형 연결리스트 - 자료구조 기초](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kiminhovator&logNo=220335487935)                  
 [[자료구조] 연결리스트의 종류와 특성](https://chaezzing-fly-dev.tistory.com/16)              
-
+[자바 [JAVA] - Singly LinkedList (단일 연결리스트) 구현하기](https://st-lab.tistory.com/167)
