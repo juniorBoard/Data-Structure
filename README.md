@@ -7,9 +7,15 @@
 ### Soyeon
 + [Array](https://github.com/juniorBoard/Data-Structure/blob/main/soyeon/Array.md)
 
+### Minwoo
++ [배열](https://github.com/juniorBoard/Data-Structure/blob/main/Minwoo/Array.md)
+
 ## ArrayList
 ### Jehyeop
 + [ArrayList](https://github.com/juniorBoard/Data-Structure/blob/main/Jehyeop/ArrayList.md)
+
+### Minwoo
++ [ArrayList](https://github.com/juniorBoard/Data-Structure/blob/main/Minwoo/ArrayList.md)
 
 ## LinkedList
 ### Jehyeop
@@ -19,3 +25,6 @@
 
 ### Soyeon
 + [Array vs ArrayList vs LinkedList](https://github.com/juniorBoard/Data-Structure/blob/main/soyeon/Array%2C%20ArrayList%2C%20LinkedList.md)
+
+### Minwoo
++ [LinkedList](https://github.com/juniorBoard/Data-Structure/blob/main/Minwoo/LinkedList.md)
