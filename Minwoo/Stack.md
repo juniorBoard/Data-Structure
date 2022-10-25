@@ -7,6 +7,7 @@
 <img  alt="스택" src="https://github.com/juniorBoard/Data-Structure/blob/main/Minwoo/stack/stack.png" width="70%">
 
 ## 구현할 기능
+[구현 코드](https://github.com/juniorBoard/Data-Structure/blob/main/Minwoo/stack/StackImpl.java)
 + push() → 스택에 맨 위에 넣는 기능
 + pop() → 맨 위에서 꺼내고 없애는 기능
 + peek() → 맨 위의 값을 확인 하는 기능(없애지 않음)
