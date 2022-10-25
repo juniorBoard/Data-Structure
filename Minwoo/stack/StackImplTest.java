@@ -11,8 +11,11 @@ public class StackImplTest {
         System.out.printf("요소 추가 : %s\n", stack);
         stack.push(3);
         System.out.printf("요소 추가 : %s\n", stack);
+        System.out.printf("크기 : %d\n", stack.size());
         System.out.printf("peek : %s, %s\n", stack.peek(), stack);
+        System.out.printf("크기 : %d\n", stack.size());
         System.out.printf("pop : %s, %s\n", stack.pop(), stack);
+        System.out.printf("크기 : %d\n", stack.size());
         System.out.printf("pop : %s, %s\n", stack.pop(), stack);
         System.out.printf("pop : %s, %s\n", stack.pop(), stack);
         System.out.printf("pop : %s, %s\n", stack.pop(), stack); // 예외 발생

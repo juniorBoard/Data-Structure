@@ -24,6 +24,10 @@ public class StackImpl {
         return size == 0;
     }
 
+    public int size() {
+        return size;
+    }
+
     @Override
     public String toString() {
         String str = "[";
