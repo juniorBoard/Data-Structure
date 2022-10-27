@@ -6,6 +6,10 @@
 
 삽입 및 삭제에 `O(1)`, 탐색에 `O(n)`이 걸린다.
 
+<img src = https://user-images.githubusercontent.com/74857364/198227627-742a5643-d897-41ae-bb38-a7ca2c593c27.png width="65%">
+
+<img src = https://user-images.githubusercontent.com/74857364/198227674-792cd477-5359-42d0-bb99-bd9cdbf96ead.png width="65%">     
+
 <br><br><br>
 
 ## 개념
@@ -185,6 +189,7 @@ public class StackTest {
 
 <br><br><br>
 
-출처    
-[[자료구조] 스택(Stack)이란](https://gmlwjd9405.github.io/2018/08/03/data-structure-stack.html)              
-[숙제: Stack 구현](https://velog.io/@kungsboy/%EC%88%99%EC%A0%9C-Stack-%EA%B5%AC%ED%98%84)                        
+출처     
+[[자료구조] 스택(Stack)이란](https://gmlwjd9405.github.io/2018/08/03/data-structure-stack.html)               
+[숙제: Stack 구현](https://velog.io/@kungsboy/%EC%88%99%EC%A0%9C-Stack-%EA%B5%AC%ED%98%84)                         
+[스택이란? (Stack)](https://cwjuns.tistory.com/18)           
