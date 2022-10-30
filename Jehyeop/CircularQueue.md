@@ -29,7 +29,7 @@
 - R바로 다음 자리가 F가 되는 경우 Full 상태로 정의
 
 ### 그림 설명
-1. R == F : Empty
+1. R == F : Empty   
    <img width="633" alt="원형큐 비어있는 상태" src="https://user-images.githubusercontent.com/90807141/198819172-223c858b-c071-4701-beab-5a9023bc87a6.png">
 - F와 R이 같은 공간을 배열 index로 설정 (초기 index 자리가 비어있다.)
 - index의 다음 공간부터 데이터를 채워 나간다. 
