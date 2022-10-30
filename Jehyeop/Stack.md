@@ -16,7 +16,7 @@ LIFO(Last In First Out) : 후입선출 형식의 자료구조
 <img width="58" alt="peek()" src="https://user-images.githubusercontent.com/90807141/198383789-28bd6328-ebdb-4c39-b32b-65e5c41c1040.png">
 
 - 스택의 가장 위에 있는 항목을 반환
-- 
+
 ### 4. isEmpty()
 <img width="58" alt="empty2" src="https://user-images.githubusercontent.com/90807141/198384985-7948a0ce-5194-48f8-a3aa-f7b4ae726e6d.png">
 
