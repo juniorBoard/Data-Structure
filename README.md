@@ -24,7 +24,7 @@
 + [Array vs ArrayList vs LinkedList](https://github.com/juniorBoard/Data-Structure/blob/main/Jehyeop/Array%20vs%20ArrayList%20vs%20LinkedList.md)
 
 ### Soyeon
-- [LinkedList](./soyeon/Linked List.md)            
+- [LinkedList](https://github.com/haedal-uni/JB-Data-Structure/blob/main/soyeon/Linked%20List.md)            
 + [Array vs ArrayList vs LinkedList](https://github.com/juniorBoard/Data-Structure/blob/main/soyeon/Array%2C%20ArrayList%2C%20LinkedList.md)
 
 ### Minwoo
