@@ -15,7 +15,7 @@ public class QueuePrac2 {
     }
 
     public boolean isFull() {
-        return rear == MAX - 1;
+        return rear == MAX;
     }
 
     public int size() {
@@ -47,11 +47,22 @@ public class QueuePrac2 {
         return queue[front];
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = front; i < rear; i++) {
+            sb.append(queue[i]);
+            if (i < rear - 1) sb.append(", ");
+        }
+        return sb + "]";
+    }
+
     public static void main(String[] args) {
         QueuePrac2 queue = new QueuePrac2();
         for(int i=0; i<3; i++){
             queue.push(i);
         }
+        System.out.println(queue);
         System.out.println(queue.isFull());
         queue.pop();
         System.out.println(queue.peek());
