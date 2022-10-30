@@ -33,7 +33,7 @@ public class QueuePrac {
         System.out.println(queue.element()); // queue 맨 앞의 값 반환, 비어있는 경우 예외발생
 
         System.out.println("< peek() >");
-        System.out.println(queue.peek()); // queue 맨 앞의 값 반환 후 삭제, 비어있는 경우 null
+        System.out.println(queue.peek()); // queue 맨 앞의 값 반환, 비어있는 경우 null
 
         System.out.println("\n< remove() >");
         queue.remove(); // queue 맨 앞의 값 반환 후 삭제, 비어있는 경우 예외발생
