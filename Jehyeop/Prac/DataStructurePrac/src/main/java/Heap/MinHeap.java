@@ -15,8 +15,9 @@ public class MinHeap {
         heap.add(val);
         int data = heap.size()-1; // p는 새로 삽입한 노드의 인덱스 정보
         while(data > 1 && heap.get(data/2) > heap.get(data)) {
+            int temp = heap.get(data/2);
             heap.set(data/2, val);
-            heap.set(data, heap.get(data/2)); // heap.get(data/2) : 부모의 노드값
+            heap.set(data, temp); // heap.get(data/2) : 부모의 노드값
 
             data /= 2; // 새로 삽입한 노드가 부모 노드 인덱스 값으로 변경
         }

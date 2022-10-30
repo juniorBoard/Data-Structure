@@ -28,10 +28,10 @@ FIFO(First In First Out) : 선입선출 형식의 자료구조
 - front == rear
 
 ### 3. isFull()
-<img width="350" alt="QueueFull" src="https://user-images.githubusercontent.com/90807141/198545014-8bc02102-9a35-497c-a58d-2b3b8e733828.png">
+<img width="350" alt="queueFull 수정" src="https://user-images.githubusercontent.com/90807141/198879316-ad44d009-fece-4397-959e-85fc1da36f9a.png">
 
 - 데이터가 꽉 차있는지 확인
-- rear == QueueSize-1
+- rear == QueueSize
 
 ### 4. Peek()
 - 가장 첫번째 데이터를 반환하되 삭제는 하지 않는다. 

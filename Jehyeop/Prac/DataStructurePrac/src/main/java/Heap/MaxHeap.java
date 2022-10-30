@@ -21,8 +21,9 @@ public class MaxHeap {
         // 루트까지 이동, 자식이 더 크면 교환
         while(data > 1 && heap.get(data) > heap.get(data/2)) {
             // 부모랑 자식 swap
+            int temp = heap.get(data/2);
             heap.set(data/2, heap.get(data));
-            heap.set(data, heap.get(data/2));
+            heap.set(data, temp);
 
             data /= 2;
         }

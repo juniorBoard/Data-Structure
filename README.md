@@ -30,13 +30,24 @@
 + [LinkedList](https://github.com/juniorBoard/Data-Structure/blob/main/Minwoo/LinkedList.md)
 
 ## Stack
+### Jehyeop
++ [Stack](./Jehyeop/Stack.md)
+
 ### Minwoo
 + [Stack](./Minwoo/Stack.md)
 
 ## Queue
+### Jehyeop
++ [Queue](./Jehyeop/Queue.md)
++ [CircularQueue](./Jehyeop/CircularQueue.md)
+
 ### Minwoo
 + [Queue](./Minwoo/Queue.md)
 
 ## Heap
+### Jehyeop
++ [Heap](./Jehyeop/Heap.md)
+
 ### Minwoo
 + [Heap](./Minwoo/Heap.md)
+
