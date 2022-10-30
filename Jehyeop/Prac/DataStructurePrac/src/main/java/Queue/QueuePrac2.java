@@ -56,7 +56,6 @@ public class QueuePrac2 {
         }
         return sb + "]";
     }
-
     public static void main(String[] args) {
         QueuePrac2 queue = new QueuePrac2();
         for(int i=0; i<3; i++){
