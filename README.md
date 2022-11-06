@@ -69,6 +69,9 @@
 ### Minwoo
 + [Tree](./Minwoo/Tree.md)
 
+### Soyeon
+- [Tree](./soyeon/tree/Tree.md)
+
 ## Binary Search Tree
 ### Jehyeop
 + [BinarySearchTree](./Jehyeop/BinarySearchTree.md)
@@ -76,9 +79,15 @@
 ### Minwoo
 + [Binary Search Tree](./Minwoo/BinarySearchTree.md)
 
+### Soyeon
+- [Binary Search Tree](./soyeon/binarySearchTree/BinarySearchTree.md)
+
 ## Hash
 ### Jehyeop
 + [Hash](./Jehyeop/Hash.md)
 
 ### Minwoo
 + [Hash](./Minwoo/Hash.md)
+
+### Soyeon
+- [Hash](./soyeon/hash/Hash.md)
