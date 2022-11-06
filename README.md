@@ -65,10 +65,19 @@
 ### Minwoo
 + [Tree](./Minwoo/Tree.md)
 
+### Soyeon
+- [Tree](./soyeon/tree/Tree.md)
+
 ## Binary Search Tree
 ### Minwoo
 + [Binary Search Tree](./Minwoo/BinarySearchTree.md)
 
+### Soyeon
+- [Binary Search Tree](./soyeon/binarySearchTree/BinarySearchTree.md)
+
 ## Hash
 ### Minwoo
 + [Hash](./Minwoo/Hash.md)
+
+### Soyeon
+- [Hash](./soyeon/hash/Hash.md)
