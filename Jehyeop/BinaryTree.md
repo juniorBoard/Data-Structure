@@ -33,7 +33,7 @@
 ### 포화 이진 트리 (Perfect Binary Tree)
 <img width="360" alt="포화이진트리" src="https://user-images.githubusercontent.com/90807141/199882066-faaa6843-4d93-4ea0-8359-8c3cca0d4954.png">
 
-- 모든 레벨이 노드로 꽉치 있는 트리 
+- 모든 레벨이 노드로 꽉차 있는 트리 
 - 전 이진 트리의 성질도 만족
 - 모든 레벨에 노드가 꽉차서 더이상 레벨이 유지된 상태에서 노드 추가가 불가능한 상태
 

@@ -62,13 +62,23 @@
 - [Heap](./soyeon/Heap.md)
 
 ## Tree
+### Jehyeop
++ [Tree](./Jehyeop/Tree.md)
++ [BinaryTree](./Jehyeop/BinaryTree.md)
+
 ### Minwoo
 + [Tree](./Minwoo/Tree.md)
 
 ## Binary Search Tree
+### Jehyeop
++ [BinarySearchTree](./Jehyeop/BinarySearchTree.md)
+
 ### Minwoo
 + [Binary Search Tree](./Minwoo/BinarySearchTree.md)
 
 ## Hash
+### Jehyeop
++ [Hash](./Jehyeop/Hash.md)
+
 ### Minwoo
 + [Hash](./Minwoo/Hash.md)
